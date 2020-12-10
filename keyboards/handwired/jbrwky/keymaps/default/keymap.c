@@ -21,7 +21,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define ____ KC_TRNS
 
-#define KC_SHFT KC_RSHIFT
+#define JC_SHFT KC_RSHIFT
+#define JC_ENTR KC_ENTER
+#define JC_BSLH KC_BSLASH
 
 #define JC_RARW KC_RIGHT
 #define JC_LARW KC_LEFT
@@ -36,16 +38,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,              KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
 
-                                   MO(1),   KC_ESC,            KC_BSPC, KC_SPC,
+                                   MO(1),   JC_SHFT,           KC_SPC,  JC_ENTR,
 
-                                   KC_LCTL, KC_LALT,           KC_SHFT, KC_TAB
+                                   KC_LCTL, KC_LALT,           KC_BSPC, KC_TAB
   ),
   [1] =LAYOUT(
         KC_1,    KC_2,    KC_3,    KC_4,    KC_5,              KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
 
-        KC_GRAVE,____,    ____,    ____,    ____,              RESET,   ____,    KC_LBRC, KC_RBRC, KC_BSLASH,
+        KC_GRAVE,____,    ____,    ____,    ____,              RESET,   ____,    JC_BSLH, KC_MINUS,KC_EQUAL,
 
-        ____,    ____,    ____,    ____,    ____,              ____,    ____,    ____,    KC_QUOTE,____,
+        ____,    ____,    ____,    KC_ESC,  KC_ESC,            ____,    ____,    KC_QUOTE, KC_LBRC, KC_RBRC, 
 
                                    ____,    ____,              JC_UARW, JC_RARW,
 
